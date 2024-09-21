@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    </meta>
+</head>
+
+<body style="background-color: #000;">
+    <h1 id="h1">动画测试</h1>
+    <div class="red-ball"></div> <!-- 这个 div 代表红色的小球 -->
+
+    <div id="app">
+        <input type="text"></input>
+    </div>
+    <div id="container"></div>
+    <div id="carousel">
+        <div id="carousel-container">
+            <div class="carousel-item"></div>
+            <div class="carousel-item"></div>
+            <div class="carousel-item"></div>
+            <div class="carousel-item"></div>
+            <div class="carousel-item"></div>
+        </div>
+        <button class="prev">←</button>
+        <button class="next">→</button>
+    </div>
+
+</body>
+
+</html>
+<script src="../js/animation.js"></script>
+<script src="../js/imgData.js"></script>
+<script src="../common/randomRect.js"></script>
+<script src="../image-copy-script/index.js"></script>
+<style>
+    .body {
+        background-color: #000;
+    }
+
+    .carouse-container {
+        position: relative;
+        align-content: center;
+    }
+
+    .carousel-item {
+        position: absolute;
+        /* 绝对定位 */
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    #carousel {
+        position: relative;
+    }
+
+    #carousel button {
+        position: absolute;
+        bottom: 10px;
+        /* 按钮距离底部的距离 */
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    #carousel .prev {
+        left: 50%;
+        transform: translateX(50%);
+    }
+
+    #carousel .next {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .prev:hover,
+    .next:hover {
+        background-color: #45a049;
+        /* 暗绿色 */
+    }
+
+    .red-ball {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        border-radius: 50%;
+        transition: opacity 2s;
+    }
+
+    .img-element {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* 鼠标移入时的动画效果 */
+    /* .img-element:hover {
+        transform: scale(1.2);
+        z-index: 10;
+    } */
+
+    /* 其他元素缩小效果 */
+    /* .img-element-other :hover {
+        transform: scale(0.9);
+    } */
+</style>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>red-ball</title>
+    </meta>
+</head>
+
+<body>
+    <div id="carousel">
+        <h1 id="h1">动画测试</h1>
+        <button class="next">Stop</button>
+        <div class="red-ball"></div> <!-- 这个 div 代表红色的小球 -->
+    </div>
+</body>
+
+</html>
+<script src="../js/animation.js"></script>
+<script src="../js/runTask.js"></script>
+<script src="../js/ball.js"></script>
+<style>
+    .red-ball {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        border-radius: 50%;
+        transition: opacity 2s;
+    }
+
+    .prev {
+        left: 50%;
+        transform: translateX(50%);
+    }
+
+    .carousel {
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        /* 视口高度 */
+        width: 100%;
+        /* 视口宽度 */
+    }
+
+    .next {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+</style>
